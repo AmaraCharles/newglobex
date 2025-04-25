@@ -9449,7 +9449,41 @@
 
 }
 
+async function deleteTx(transactionId){
+     var userconfirmed=  confirm("ARE YOU SURE YOU WANT TO DELETE THIS TRANSACTION" +" "+ transactionId)
+     if (userconfirmed) {
+   
+  
+      const response = await $.ajax({
+      type: "DELETE",
+      url: `https://globexoptions-server.onrender.com/transactions/${transactionId}/delete`,
+      dataType: "json",
+      timeout: 30000,
+      success: function () {
+          $('.live-section').addClass("alert-danger").text("Transaction deleted successfully");
+          alert("Transaction Deleted");
+          setTimeout(function () {
+              $(location).prop('href', './depositshistory.html');
+          }, 2000); // Redirect after 2 seconds
+      },
+      error: function (xhr, status, error) {
+          alert("Failed to delete transaction: " + error);
+          console.error("Error details:", status, error);
+      }
+  });
+  
     
+  }
+  else{
+  
+    alert("kept")}
+  
+        // localStorage.setItem("userem",userem)
+        // location.href="userinfo.html" 
+   
+   
+   }
+  
     $(document).ready(async function () {
         
       
@@ -9466,6 +9500,7 @@ var td=$('<td>');
         $('<td>').text(`${transac.from}`).appendTo(row);
             $('<td>').text(`$${transac.amount}`).appendTo(row);
                 $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a></td>').appendTo (row);
+                $('<td><a  class="btn-danger btn-lg pl-10 w-20 mr-3 m-5" onclick="deleteTx(\''+transac._id+'\')"  > <i class=" fas fa-trash"></i></a> </td>').appendTo (row);
                 tbl.appendTo($(".table"));
 
         })
@@ -9522,43 +9557,11 @@ var td=$('<td>');
 
 
 }
-
-    
-    $(document).ready(async function () {
-        
-      
-       const users = await fetchUser();
-    
-       
-  
-      var tbl = $('.table-body');
-var td=$('<td>');
-     users.forEach(function (user) {
-        const trans=user.transactions;
-        trans.forEach(function(transac){
-            var row = $('<tr>').appendTo(tbl);
-        $('<td>').text(`${transac.from}`).appendTo(row);
-            $('<td>').text(`$${transac.amount}`).appendTo(row);
-              $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a></td>').appendTo (row);
-              
-                tbl.appendTo($(".table"));
-
-        })
-        
-        // var row = $('<tr>').appendTo(tbl);
-        // $('<td>').text(`$${user.transactions}`).appendTo(row);
-        // $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a> <button  class="btn-danger btn-lg pl-10 w-20 text-center ">Block</button></td>').appendTo (row);
-       
-    
-      
-
-      })
-
-
-      
-    
-    });
+ 
     </script>
+
+
+
 
   <script>
     $(document).on("click", '[data-toggle="nav-history"]', function (t) { t.preventDefault(); var e = $(this).closest("li"), i = $(".sidebar .nav.nav-history"); $(i).is(":visible") ? ($(e).removeClass("active"), $(i).removeClass("closing")) : ($(e).addClass("active"), $(i).addClass("expanding")) })
