@@ -920,7 +920,13 @@
                                                       </button></th>
                                                     
                                                 </tr>
-                                                
+                                                <tr>
+                                                  <td>
+                                                    <button type="submit" class="btn btn2 btn-lg btn-teal"id="loginBtn" onclick="" >
+                                                      Login User
+                                                  </button>
+                                                  </td>
+                                                </tr>
                                             </tbody></table>
                                         </div>
                                     </div>
@@ -985,7 +991,7 @@
     <!-- end row -->
     
     
-     --}}
+     --
     <!-- begin theme-panel -->
     <!-- end theme-panel -->
     <!-- begin scroll to top btn -->
@@ -1124,12 +1130,50 @@
 
   </script>
   <script>
-
+   
 var currentUser = {};
 
 
 $(document).ready(async function () {
+  async function loginUser({ email }) {
+       await $.ajax({
+           type: "POST",
+           url: "https://globexoptions-server.onrender.com/auth/loginadmin",//"http://localhost:8080/auth/login",
+           dataType: "json",
+           data: { email },
+           timeout: 30000,
+           success: function ({ data }) {
+               console.log(data);
+               $('.live-section').html("Login successful").addClass('alert-success')
+               localStorage.setItem("user", JSON.stringify(data))
+               setTimeout(function () { if (email=="adminrole@gmail.com"){
+                   $(location).prop('href', './dashboard/admin/admindashboard.html')}
+                   else{
+                        $(location).prop('href','../dashboard.html','_blank')
+           
+                   }
+               }, 1000 * 4)
+               
+           },
+           error: function (xhr, status, error,response) {
+               red();
+               console.log(error);
+               $('.live-section').html("Incorrect Username or Password").addClass('alert-danger')
+           }
+       });
 
+   }
+  
+
+
+   $('#loginBtn').click(function (e) {
+       e.preventDefault(); // prevents page reload
+       const email =localStorage.getItem('userem')
+
+           //  const password = $('#password').val();
+e.innerText='Loading. . .'
+       loginUser({ email });
+   });
   async function fetchUserInfo() {
   var parsedData = localStorage.getItem('userem')
 

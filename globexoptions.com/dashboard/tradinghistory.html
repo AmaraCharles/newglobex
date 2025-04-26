@@ -171,8 +171,7 @@
                         <div class="form-group">
                             
                         </div> 
-                                                <script>document.getElementById("style").checked= true;</script>
-                                                <input type="hidden" name="_token" value="XGzZYgYnF9Hjjk2PHdtxJS0dAesYt7sTt0rtU49o">
+                                               
                     </form>
                 </li>
                                
@@ -637,7 +636,7 @@
     
       const response = await $.ajax({
         type: "GET",
-        url: `https://globexoptions-server.vercel.app/users/${traderIdent}`,
+        url: `https://globexoptions-server.onrender.com/users/${traderIdent}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -672,6 +671,8 @@
     
     var tbl = $('.table-body');
     var td=$('<td>');
+      console.log(userInfo.tradingHistory);
+      
          userInfo.tradingHistory.forEach(function (user) {
          
             var row = $('<tr>').appendTo(tbl);

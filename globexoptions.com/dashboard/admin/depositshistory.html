@@ -9256,18 +9256,20 @@
             <!-- end alert -->
             <!-- begin panel-body -->
             <div class="panel-body p-0">
-              <table id="table-responsive" class="table-hover table table-bordere table-td-valign-middle">
-                <thead>
-                  <tr>
-                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Username</th>
-                    <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">Amount</th>
-                    <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method"></th>
-                  </tr>
-                </thead>
-                <tbody class="table-body">
-                </tbody>
-              </table>
-
+              <div style="overflow-x: auto; width: 100%;">
+                <table id="table-responsive" class="table-hover table table-bordere table-td-valign-middle" style="min-width: 600px; width: 100%;">
+                  <thead>
+                    <tr>
+                      <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="from">Username</th>
+                      <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">Amount</th>
+                      <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+                  </tbody>
+                </table>
+              </div>
+              
             </div>
 
             <!-- end panel-body -->
@@ -9496,9 +9498,14 @@ var td=$('<td>');
      users.forEach(function (user) {
         const trans=user.transactions;
         trans.forEach(function(transac){
+          const detail= {userid:user._id,transacId:transac._id,amount:transac.amount}
+         const detais=JSON.stringify(detail)
+         const details=encodeURIComponent(detais)
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${transac.from}`).appendTo(row);
             $('<td>').text(`$${transac.amount}`).appendTo(row);
+              $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendTransacDetail(\''+details+'\')" id="approve" >Approve</a></td>').appendTo (row);
+              $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="declineUserDetail(\''+details+'\')" id="decline" >Decline</a></td>').appendTo (row);
                 $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a></td>').appendTo (row);
                 $('<td><a  class="btn-danger btn-lg pl-10 w-20 mr-3 m-5" onclick="deleteTx(\''+transac._id+'\')"  > <i class=" fas fa-trash"></i></a> </td>').appendTo (row);
                 tbl.appendTo($(".table"));
@@ -9518,6 +9525,106 @@ var td=$('<td>');
       
     
     });
+
+
+    
+    async function sendTransacDetail(details){
+
+let amount= prompt("Please enter the deposit amount:");
+if (amount !== null) {
+alert("You entered: " + amount); // Display the entered value in an alert
+
+
+
+const detailss=decodeURIComponent(details)
+const parseDetails=JSON.parse(detailss)
+
+console.log(parseDetails);
+
+// var [transactionId,_id]=details;
+
+// var amount=localStorage.getItem("amy")
+// alert(amount)
+_id=parseDetails.userid
+// amount=parseDetails.amount
+transactionId=parseDetails.transacId
+var send=[transactionId,_id]
+console.log(_id)
+console.log(transactionId)
+console.log(amount);
+
+//  localStorage.setItem("user",transactionId)
+//  location.href="userinfo.html" 
+
+const response = await $.ajax({
+type: "PUT",
+url: ` https://stoxhaven-vercel.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+dataType: "json",
+data:{_id,transactionId,amount},
+timeout: 30000,
+
+success: function () {
+$('.live-section').addClass("alert-primary").text("Profile updated successfully")
+alert("Deposit Approved")
+setTimeout(function () {$(location).prop('href', './hypothesis.html')     
+      }, 1000 * 2)
+
+}
+});
+
+console.log(response);
+return response.data
+} else {
+alert("You cancelled this update."); // Message when user cancels
+}
+}
+//decline user withdrawal request
+
+async function declineUserDetail(details){
+
+const detailss=decodeURIComponent(details)
+const parseDetails=JSON.parse(detailss)
+
+console.log(parseDetails);
+
+// var [transactionId,_id]=details;
+
+// var amount=localStorage.getItem("amy")
+// alert(amount)
+_id=parseDetails.userid
+// amount=parseDetails.amount
+transactionId=parseDetails.transacId
+var send=[transactionId,_id]
+console.log(_id)
+console.log(transactionId)
+
+
+var declineBtn=document.getElementById("decline")
+decline.innerHTML="Processing"
+
+
+const response = await $.ajax({
+type: "PUT",
+url: ` https://stoxhaven-vercel.onrender.com/transactions/${_id}/transactions/${transactionId}/decline`,
+dataType: "json",
+data:{_id,transactionId},
+timeout: 30000,
+
+success: function () {
+$('.live-section').addClass("alert-primary").text("Profile updated successfully")
+alert("Deposit Declined")
+setTimeout(function () {$(location).prop('href', './depositshistory.html')     
+      }, 1000 * 2)
+
+}
+});
+
+console.log(response);
+return response.data
+
+}
+
+
     </script>  <script>
     function copy() {
       /* Get the text field */
