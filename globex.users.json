@@ -1,0 +1,478 @@
+[{
+  "_id": {
+    "$oid": "67a8f63a9b188343678c9152"
+  },
+  "firstName": "Nikolas",
+  "lastName": "Tiitinen",
+  "email": "Nikolas.tiitinen@gmail.com",
+  "referralCode": "lj0GA8",
+  "referredUsers": [],
+  "tradingHistory": [
+    {
+      "_id": "d4c20307-2b0b-4dd6-a74e-d24f37626c9d",
+      "currency": "SPX",
+      "profit": "200",
+      "date": "10/02/2025"
+    },
+    {
+      "_id": "10e2630d-b5e2-45c6-a3f4-fca9a7fbb375",
+      "currency": "NVDA",
+      "profit": "205",
+      "date": "11/02/2025"
+    },
+    {
+      "_id": "0279e697-d0af-45d1-9635-1b587bfe36e5",
+      "currency": "SPX",
+      "profit": "215",
+      "date": "12/02/2024"
+    },
+    {
+      "_id": "32c331a3-c7e6-4ae6-90e3-fb2a3cdb22f4",
+      "currency": "TEM",
+      "profit": "230",
+      "date": "13/02/2025"
+    },
+    {
+      "_id": "0cae33b3-c694-42d8-abc6-80916f229b21",
+      "currency": "NVDA",
+      "profit": "280",
+      "date": "14/02/2025"
+    },
+    {
+      "_id": "fe5f4bcc-1a80-43f1-a77e-a4ddc955f0d9",
+      "currency": "NVDA",
+      "profit": "599.33",
+      "date": "18/02/2025"
+    },
+    {
+      "_id": "62f8f1b2-09d4-410d-9db4-3db45e49bf27",
+      "currency": "TSLA",
+      "profit": "635.30",
+      "date": "19/02/2025"
+    },
+    {
+      "_id": "43d808dc-453c-4507-8335-436eb19df628",
+      "currency": "META",
+      "profit": "673.42",
+      "date": "20/02/2025"
+    },
+    {
+      "_id": "4bc39dda-9a5e-4223-94d4-33850d4d119d",
+      "currency": "SPX",
+      "profit": "713.82",
+      "date": "21/02/2025"
+    },
+    {
+      "_id": "7a5a8772-02ad-4b9d-bafc-f55488b37693",
+      "currency": "PLTR",
+      "profit": "756.65",
+      "date": "24/02/2025"
+    },
+    {
+      "_id": "bec84c4e-986e-4a43-8906-2402f174b64a",
+      "currency": "MSTR",
+      "profit": "802.05",
+      "date": "25/02/2025"
+    },
+    {
+      "_id": "257b5d8a-794f-44d5-a889-653ebff1b37d",
+      "currency": "TSLA",
+      "profit": "850.17",
+      "date": "26/02/2025"
+    }
+  ],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$FLzydBwwBf8cGZ2WN5deru92A9Cw/ut0C6zpS1Iv3yFTZAFdrNLv2",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "7810.74",
+  "balance": "16519.73",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "67f9a7764cf2285af2c66d8f"
+  },
+  "firstName": "Fakhar",
+  "lastName": "mohammed",
+  "email": "chasemicheal95@gmail.com",
+  "referralCode": "yyG3NG",
+  "referredUsers": [],
+  "tradingHistory": [
+    {
+      "_id": "5c790e89-7d66-4e73-8b9f-5455912dc8fa",
+      "currency": "PLTR",
+      "profit": "800",
+      "date": "14/04/2024"
+    },
+    {
+      "_id": "f9fdba6d-e2cb-4862-9f74-ebcb17d426b2",
+      "currency": "SPY ",
+      "profit": "960",
+      "date": "15/04/2024"
+    },
+    {
+      "_id": "3deb18a1-8ff3-43f5-9763-7d6a16d1c807",
+      "currency": "SPY ",
+      "profit": "1,152",
+      "date": "16/04/2025"
+    },
+    {
+      "_id": "0e07ce88-674c-431f-95b7-da32a35f8410",
+      "currency": "SPY",
+      "profit": "1,382",
+      "date": "17/04/2025"
+    },
+    {
+      "_id": "bc7acd6e-5684-4a99-b24a-a0a3a60d681d",
+      "currency": "SPY ",
+      "profit": "719.10",
+      "date": "21/04/2025"
+    },
+    {
+      "_id": "9cc2b12f-4a55-4d43-8f4d-044a79445549",
+      "currency": "META",
+      "profit": "826",
+      "date": "22/04/2025"
+    },
+    {
+      "_id": "6465a110-9e74-4771-b926-439a730c6112",
+      "currency": "TSLA",
+      "profit": "950",
+      "date": "23/04/2025"
+    },
+    {
+      "_id": "71820e22-4e33-4c34-a692-ddbee50b44fe",
+      "currency": "SPX",
+      "profit": "1500",
+      "date": "24/04/2025"
+    },
+    {
+      "_id": "d33dae6f-83cf-4530-8391-93ba78a343d2",
+      "currency": "TSLA",
+      "profit": "2218",
+      "date": "25/04/2025"
+    }
+  ],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$z.IeRVByeAcjlaNkX93EJex9yyGnU6xjvOVrmZzVBkln.GiTR6Ncq",
+  "amountDeposited": "0",
+  "kyc": "Verified",
+  "profit": "10501.10",
+  "balance": "17007.10",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [
+    {
+      "_id": "9c0b69ed-9e08-44e3-a9e7-6a2cef8fb9f9",
+      "method": "USDT(trc20)",
+      "address": "THgY1VMEf6bYZNFHDxLYRX8kD6jCvAB7Zp",
+      "amount": "3500",
+      "from": "Fakhar mohammed",
+      "account": null,
+      "status": "Approved"
+    }
+  ],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67f9b40fa60e607fefb1b626"
+  },
+  "firstName": "vijayakumar",
+  "lastName": "karayi",
+  "email": "efaxno@yahoo.com",
+  "referralCode": "KtSmW5",
+  "referredUsers": [],
+  "tradingHistory": [
+    {
+      "_id": "eb623fae-b477-42d9-98e3-3460232c3674",
+      "currency": "TSLA",
+      "profit": "352",
+      "date": "25/04/2025"
+    }
+  ],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$baegSabRaB7ta0D7d3ndfu0ewyfbL7zSB7xMCV6L6VTTwKPxiB/2q",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "352",
+  "balance": "3877",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "67fdfb7a3c37b89039e2f94c"
+  },
+  "firstName": "Patrick",
+  "lastName": "Potter",
+  "email": "nelsonjacob836@gmail.com",
+  "referralCode": "vqwPSH",
+  "referredUsers": [],
+  "tradingHistory": [
+    {
+      "_id": "e95b505c-8f2a-42a3-af4c-ee2e274545cb",
+      "currency": "SPY ",
+      "profit": "1000",
+      "date": "15/04/2024"
+    },
+    {
+      "_id": "f9f11fad-83e4-4625-bca7-acdf06435896",
+      "currency": "SPY ",
+      "profit": "1200",
+      "date": "16/04/2025"
+    },
+    {
+      "_id": "9bee2b3c-4ce6-44df-a8ad-58bcd21ee344",
+      "currency": "SPY",
+      "profit": "1,440",
+      "date": "17/04/2025"
+    }
+  ],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$SA6Mz5LpaTvsKk2vjCXfP.TCHL3Kvqy7tYzGjiQrap/F1IkosA.Am",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "3640",
+  "balance": "8640",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680177117f6e31381256af71"
+  },
+  "firstName": "Robert ",
+  "lastName": "Miller",
+  "email": "robertsmiller37@gmail.com",
+  "referralCode": "QEcfAm",
+  "referredUsers": [],
+  "tradingHistory": [],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$vqYBDllBXaZY6cE9YRf6OulDQrxcDxwKs.qELzYSku9an28sEaJ9.",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "0",
+  "balance": "17500",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6801b5d8b86d490fc5445678"
+  },
+  "firstName": "bhupinder",
+  "lastName": "Singh",
+  "email": "azadnz1313@gmail.com",
+  "referralCode": "xr1ecd",
+  "referredUsers": [],
+  "tradingHistory": [],
+  "referredBy": null,
+  "country": "Australia",
+  "password": "$2a$10$lB8mn20nvIkE7n2tAvsd2uK0JGYA8VpAqLSehMZ7qxyfqMEGHc5Cy",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "0",
+  "balance": "0",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6802e344b627565a003c4318"
+  },
+  "firstName": "admin",
+  "lastName": "role",
+  "email": "adminrole@gmail.com",
+  "referralCode": "7CNfZf",
+  "referredUsers": [],
+  "tradingHistory": [],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$0XnmgCfH5i7CsRs8gL4lSuCtxLWgHXtsPg4unistHpJeRu3M11i7O",
+  "amountDeposited": "0",
+  "kyc": "unverified",
+  "profit": "0",
+  "balance": "0",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "680437b655aa5cc12640358e"
+  },
+  "firstName": "Tony ",
+  "lastName": "Max",
+  "email": "jimmyhill1242@gmail.com",
+  "referralCode": "upSi7u",
+  "referredUsers": [],
+  "tradingHistory": [],
+  "referredBy": null,
+  "country": "United States",
+  "password": "$2a$10$BgaN3RMdrE5mbyUJD632Y.pp4eKpPfjOQIgb/S8MSAysmFu7/hds6",
+  "amountDeposited": "0",
+  "kyc": "verified",
+  "profit": "185271.34",
+  "balance": "46780.34",
+  "referalBonus": "0",
+  "transactions": [],
+  "accounts": {
+    "eth": {
+      "address": ""
+    },
+    "ltc": {
+      "address": ""
+    },
+    "btc": {
+      "address": ""
+    },
+    "usdt": {
+      "address": ""
+    }
+  },
+  "withdrawals": [
+    {
+      "_id": "7c11c3ac-6ca3-4cc0-aaaa-46b79442d1df",
+      "method": "BTC",
+      "address": "Djfjjajsjdjsjsjjdd",
+      "amount": "142500",
+      "from": "Tony  Max",
+      "account": null,
+      "status": "Approved"
+    }
+  ],
+  "verified": false,
+  "isDisabled": false,
+  "__v": 2
+}]
